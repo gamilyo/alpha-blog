@@ -7,6 +7,9 @@
     </div>
     </div>
 <h4 align="center"><%= @user.username%>'s articles</h4>
+<% if @user.articles.count == 0 %>
+      <h4 align = "center">You have no articles to be shown </h4>
+      <%end%>
 <div class = "center" >
   <%= will_paginate @user_articles %>
   </div>
